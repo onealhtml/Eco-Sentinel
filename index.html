@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Sentinel</title>
+    <link rel="shortcut icon" href="785116.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="main-title">Eco Sentinel</h1>
+            <nav>
+                <a href="#home">Início</a>
+                <a href="#map">Mapa</a>
+                <a href="#alerts">Alertas</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <section id="map" class="section">
+                <h2>Mapa de Incêndios</h2>
+                <div id="mapContainer"></div>
+            </section>
+
+            <section id="report" class="section">
+                <h2>Reportar Incêndio</h2>
+                <form id="fireReportForm">
+                    <label for="address">Cidade:</label>
+                    <input type="text" id="address" name="address" required>
+
+                    <label for="description">Descrição:</label>
+                    <textarea id="description" name="description" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+
+            <section id="alerts" class="section">
+                <h2>Últimos Alertas</h2>
+                <ul id="alertsList"></ul>
+            </section>
+
+            <section id="about" class="section">
+                <h2>Sobre o Eco Sentinel</h2>
+                <p>O Eco Sentinel é uma plataforma de monitoramento de incêndios florestais no Brasil. Utilizamos dados
+                    de satélite em tempo real e relatos de cidadãos para fornecer informações críticas e coordenar
+                    esforços de resposta.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Lorenzo Farias. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
